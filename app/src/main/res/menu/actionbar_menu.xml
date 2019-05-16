@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
+<!-- changed to show the item name instead of three dots-->
   <item
       android:id="@+id/action_search"
       android:title="Search"
       app:showAsAction="ifRoom" >
+
 
 
 
