@@ -14,8 +14,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RatingBar;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -39,6 +41,8 @@ public class SecondActivity extends AppCompatActivity {
   private List<Product> products;
   private ListView listView;
   private ArrayAdapter<Product> adapter;
+  private RatingBar rating_b;
+  private Button buttonsubmit;
 
   private static final String MIN_ALCO = "min_alcohol";
   private static final String MAX_ALCO = "max_alcohol";
@@ -267,12 +271,29 @@ public class SecondActivity extends AppCompatActivity {
     return productList;
   }
 
+  public void onButtonClickListener() {
+    rating_b = (RatingBar) findViewById(R.id.ratingbar);
+    buttonsubmit = (Button) findViewById(R.id.button3);
+
+    buttonsubmit.setOnClickListener(
+            new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                Toast.makeText(SecondActivity.this, getString(R.string.thanksToast), Toast.LENGTH_SHORT).show();
+              }
+            }
+    );
+  }
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.second_activity);
+    rating_b =(RatingBar) findViewById(R.id.ratingbar);
+    onButtonClickListener();
 
         // setup listview (and friends)
     setupListView();
   }
 }
+
+
