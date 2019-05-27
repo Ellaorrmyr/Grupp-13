@@ -40,12 +40,12 @@ public class SecondActivity extends AppCompatActivity {
   private ListView listView;
   private ArrayAdapter<Product> adapter;
 
+
   private static final String MIN_ALCO = "min_alcohol";
   private static final String MAX_ALCO = "max_alcohol";
   private static final String MIN_PRICE = "min_price";
   private static final String MAX_PRICE = "max_price";
   private static final String NAME = "name";
-
 
 
   private void setupListView() {
@@ -55,15 +55,15 @@ public class SecondActivity extends AppCompatActivity {
 
     // create an adapter (with the faked products)
     adapter = new ArrayAdapter<Product>(this,
-        android.R.layout.simple_list_item_1,
-        products);
+            android.R.layout.simple_list_item_1,
+            products);
 
     listView.setOnItemClickListener(new ListView.OnItemClickListener() {
       @Override
       public void onItemClick(AdapterView<?> parent,
-          final View view,
-          int position /*The position of the view in the adapter.*/,
-          long id /* The row id of the item that was clicked */) {
+                              final View view,
+                              int position /*The position of the view in the adapter.*/,
+                              long id /* The row id of the item that was clicked */) {
         Log.d(LOG_TAG, "item clicked, pos:" + position + " id: " + id);
 
         Product p = products.get(position);
@@ -86,13 +86,24 @@ public class SecondActivity extends AppCompatActivity {
     //Nightmode
     inflater.inflate(R.menu.actionbar_menu, menu);
     int nightMode = AppCompatDelegate.getDefaultNightMode();
-    if(nightMode == AppCompatDelegate.MODE_NIGHT_YES){
+    if (nightMode == AppCompatDelegate.MODE_NIGHT_YES) {
       menu.findItem(R.id.night_mode).setTitle(R.string.day_mode);
-    } else{
+    } else {
       menu.findItem(R.id.night_mode).setTitle(R.string.night_mode);
     }
+
+    //Favorites
+    MenuItem item = menu.findItem(R.id.menu_favorites);
+    item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+      @Override
+      public boolean onMenuItemClick(MenuItem item) {
+              setContentView(R.layout.favorite_activity);
+                    return true;
+        }
+    });
     return true;
   }
+
 
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
@@ -107,7 +118,7 @@ public class SecondActivity extends AppCompatActivity {
         break;
     }
 
-    //Nightmode
+     //Nightmode
     if (item.getItemId() == R.id.night_mode) {
       // Get the night mode state of the app.
       int nightMode = AppCompatDelegate.getDefaultNightMode();
@@ -122,11 +133,11 @@ public class SecondActivity extends AppCompatActivity {
 // Recreate the activity for the theme change to take effect.
       recreate();
 
+
     }
+
     return true;
-
   }
-
 
   // get the entered text from a view
   private String valueFromView(View inflated, int viewId) {
@@ -153,6 +164,7 @@ public class SecondActivity extends AppCompatActivity {
     final View viewInflated = LayoutInflater
         .from(this).inflate(R.layout.search_dialog, null);
 
+
     builder.setView(viewInflated);
 
     builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
@@ -168,8 +180,6 @@ public class SecondActivity extends AppCompatActivity {
         addToMap(arguments, MAX_ALCO, valueFromView(viewInflated, R.id.max_alco_input));
         addToMap(arguments, MIN_PRICE, valueFromView(viewInflated, R.id.min_price_input));
         addToMap(arguments, MAX_PRICE, valueFromView(viewInflated, R.id.max_price_input));
-
-
         addToMap(arguments, NAME, valueFromView(viewInflated, R.id.name_input));
 
 
@@ -271,8 +281,7 @@ public class SecondActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.second_activity);
-
-        // setup listview (and friends)
+    // setup listview
     setupListView();
   }
 }

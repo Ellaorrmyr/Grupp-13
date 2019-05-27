@@ -43,10 +43,13 @@
   <!-- ProductActivity strings end  -->
 
   <!-- Nightmode/daymode string start  -->
-
   <string name="night_mode">Night Mode</string>
   <string name="day_mode">Day Mode</string>
-
   <!-- Nightmode/daymode string end  -->
+
+  <!-- Favorite stuff string start  -->
+  <string name="favorites">View Favorites</string>
+    <string name="favorite_list">Right now there are no favorites</string>
+    <!-- Favorite stuff string end  -->
 
 </resources>

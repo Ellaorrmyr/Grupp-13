@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         Button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (((Button) v).isClickable()) {
+                if (v.isClickable()) {
                     setContentView(R.layout.second_activity);
                     Intent i = new Intent(MainActivity.this, SecondActivity.class);
                     startActivity(i);
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (((Button) v).isClickable()) {
+                if (v.isClickable()) {
                     setContentView(R.layout.third_activity);
                     Intent i = new Intent(MainActivity.this, ThirdActivity.class);
                     startActivity(i);
