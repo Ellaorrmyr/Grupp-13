@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- overflow menu for choosing a language (Will be visible in main activity) -->
+    <item
+        android:id="@+id/action_english"
+        android:title="@string/english" />
+
+    <item
+        android:id="@+id/action_swedish"
+        android:title="@string/swedish" />
+
+
+</menu>

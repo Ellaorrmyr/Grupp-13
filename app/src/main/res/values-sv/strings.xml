@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Systembolaget</string>
+    <string name="App_info">Den här appen innehåller information om alkohol. Du måste vara över 20 för att använda söktjänst</string>
+    <string name="alcohol">Alkohol</string>
+    <string name="over20_button">Jag är över 20</string>
+    <string name="under20_button">Nej, jag är under 20</string>
+    <string name="thanksToast">Tack</string>
+    <string name="question_text">Gillar du vår app?</string>
+    <string name="searchTitle">Sök produkter</string>
+    <string name="submit_button">Lämna in</string>
+    <string name="disregard_text">Det är uppenbart att du är för ung om du kan inte ens ljuga</string>
+    <string name="error_wrong_search_input">Sökning gav inga träff. Försök igen</string>
+    <string name="go_back_button">Gå tillbaka</string>
+    <string name="max_alco_hint">max alkohol, t. ex. 5.0</string>
+    <string name="max_price_hint">max pris, t. ex. 19</string>
+    <string name="min_alco_hint">min alkohol, t. ex. 4.0</string>
+    <string name="min_price_hint">min pris, t. ex. 12</string>
+
+    <string name="name_hint">namn (börjar med stor bokstav)</string>
+
+
+
+    <string name="english">Engelska</string>
+    <string name="swedish">Svenska</string>
+    <string name="search_actionbar">Söka</string>
+    <string name="name">Namn</string>
+    <string name="price">Pris</string>
+    <string name="productGroup">Produktgrupp</string>
+    <string name="volume">Volym</string>
+</resources>

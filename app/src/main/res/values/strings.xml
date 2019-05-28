@@ -43,10 +43,16 @@
   <!-- ProductActivity strings end  -->
 
   <!-- Nightmode/daymode string start  -->
-
   <string name="night_mode">Night Mode</string>
   <string name="day_mode">Day Mode</string>
-
   <!-- Nightmode/daymode string end  -->
+
+  <!-- language_menu.xml string start  -->
+  <string name="english">English</string>
+  <string name="swedish">Swedish</string>
+  <!-- language_menu.xml strings end  -->
+
+  <!-- actionbar_menu_menu.xml strings start  -->
+  <string name="search_actionbar">Search</string>
 
 </resources>
