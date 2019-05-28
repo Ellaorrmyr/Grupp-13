@@ -15,4 +15,10 @@
         android:title="Night_Mode"
         app:showAsAction="ifRoom" />
 
+  <item
+      android:id="@+id/menu_favorites"
+      android:icon="@drawable/ic_favorite"
+      android:title="@string/favorites"
+      app:showAsAction="ifRoom|withText"/>
+
 </menu>
