@@ -43,8 +43,8 @@
   <!-- ProductActivity strings end  -->
 
   <!-- Nightmode/daymode string start  -->
-  <string name="night_mode">Night Mode</string>
-  <string name="day_mode">Day Mode</string>
+  <string name="night_mode" translatable="false">Night Mode</string>
+  <string name="day_mode" translatable="false">Day Mode</string>
   <!-- Nightmode/daymode string end  -->
 
   <!-- language_menu.xml string start  -->
@@ -54,5 +54,6 @@
 
   <!-- actionbar_menu_menu.xml strings start  -->
   <string name="search_actionbar">Search</string>
+  <string name="favorite_list" translatable="false">Favorite list</string>
 
 </resources>

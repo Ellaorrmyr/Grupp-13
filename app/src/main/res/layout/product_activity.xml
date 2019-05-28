@@ -1,32 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  android:orientation="vertical" android:layout_width="match_parent"
-  android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
   <TextView
-    android:id="@+id/product_name"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" />
+      android:id="@+id/product_name"
+      android:layout_width="match_parent"
+      android:layout_height="25dp"
+      android:textSize="16sp" />
 
   <TextView
-    android:id="@+id/product_volume"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" />
+      android:id="@+id/product_volume"
+      android:layout_width="match_parent"
+      android:layout_height="25dp"
+      android:layout_below="@id/product_name"
+      android:textSize="16sp" />
 
   <TextView
-    android:id="@+id/product_price"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" />
+      android:id="@+id/product_price"
+      android:layout_width="match_parent"
+      android:layout_height="25dp"
+      android:layout_below="@id/product_volume"
+      android:textSize="16sp" />
 
   <TextView
-    android:id="@+id/product_alcohol"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" />
+      android:id="@+id/product_alcohol"
+      android:layout_width="match_parent"
+      android:layout_height="25dp"
+      android:layout_below="@id/product_price"
+      android:textSize="16sp" />
 
   <TextView
       android:id="@+id/product_group"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content" />
+      android:layout_height="25dp"
+      android:layout_below="@id/product_alcohol"
+      android:textSize="16sp" />
+
+  <ToggleButton
+      android:id="@+id/button_favorite"
+      android:layout_width="30dp"
+      android:layout_height="32dp"
+      android:layout_below="@id/product_name"
+      android:layout_alignEnd="@id/product_name"
+      android:layout_alignParentBottom="false"
+      android:layout_marginTop="20dp"
+      android:layout_marginEnd="50dp"
+      android:background="@drawable/button_favorite"
+      android:checked="false"
+      android:longClickable="true"
+      android:text=""
+      android:textOff=""
+      android:textOn="" />
 
 
-</LinearLayout>
+
+</RelativeLayout>

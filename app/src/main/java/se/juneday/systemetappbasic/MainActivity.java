@@ -9,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RatingBar;
 import android.widget.Toast;
 
 import java.util.Locale;
@@ -17,10 +16,10 @@ import java.util.Locale;
 import static android.content.Context.MODE_PRIVATE;
 
 public class MainActivity extends AppCompatActivity {
-    private Button Over20;
-    private Button Under20;
-    private Button buttonsubmit;
-    private RatingBar rating_b;
+    private Button Button2;
+    private Button button1;
+
+
 
     //added
     // these two variables will be used by SharedPreferences
@@ -34,12 +33,12 @@ public class MainActivity extends AppCompatActivity {
         // load language after super and before setContentView
         loadLanguage();
         setContentView(R.layout.activity_main);
-        onButtonClickListener();
 
 
-        Over20 = (Button) findViewById(R.id.button2);
-        Under20 = (Button) findViewById(R.id.button1);
-        rating_b =(RatingBar) findViewById(R.id.ratingbar);
+
+        Button2 = (Button) findViewById(R.id.button2);
+        button1 = (Button) findViewById(R.id.button1);
+
 
 
 
@@ -107,10 +106,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addListenerOnButton(){
-        Over20.setOnClickListener(new View.OnClickListener() {
+        Button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (((Button) v).isClickable()) {
+                if (v.isClickable()) {
                     setContentView(R.layout.second_activity);
                     Intent i = new Intent(MainActivity.this, SecondActivity.class);
                     startActivity(i);
@@ -118,10 +117,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Under20.setOnClickListener(new View.OnClickListener() {
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (((Button) v).isClickable()) {
+                if (v.isClickable()) {
                     setContentView(R.layout.third_activity);
                     Intent i = new Intent(MainActivity.this, ThirdActivity.class);
                     startActivity(i);
@@ -130,17 +129,5 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void onButtonClickListener() {
-        rating_b = (RatingBar) findViewById(R.id.ratingbar);
-        buttonsubmit = (Button) findViewById(R.id.button3);
 
-        buttonsubmit.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(MainActivity.this, getString(R.string.thanksToast), Toast.LENGTH_SHORT).show();
-                    }
-                }
-        );
-    }
 }
