@@ -2,16 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-  <item
-    android:id="@+id/action_search"
-    android:title="Search">
-  </item>
+    <item
+        android:id="@+id/action_search"
+        android:title="Search"
+        app:showAsAction="ifRoom">
 
-  <item
-      android:id="@+id/night_mode"
-      android:icon="@android:drawable/ic_menu_view"
-      android:title="Night_Mode"
-      app:showAsAction="ifRoom" />
+    </item>
+
+    <item
+        android:id="@+id/night_mode"
+        android:icon="@android:drawable/ic_menu_view"
+        android:title="Night_Mode"
+        app:showAsAction="ifRoom" />
 
   <item
       android:id="@+id/menu_favorites"

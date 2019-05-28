@@ -47,9 +47,12 @@
   <string name="day_mode">Day Mode</string>
   <!-- Nightmode/daymode string end  -->
 
-  <!-- Favorite stuff string start  -->
-  <string name="favorites">View Favorites</string>
-    <string name="favorite_list">Right now there are no favorites</string>
-    <!-- Favorite stuff string end  -->
+  <!-- language_menu.xml string start  -->
+  <string name="english">English</string>
+  <string name="swedish">Swedish</string>
+  <!-- language_menu.xml strings end  -->
+
+  <!-- actionbar_menu_menu.xml strings start  -->
+  <string name="search_actionbar">Search</string>
 
 </resources>
