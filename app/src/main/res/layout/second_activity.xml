@@ -12,7 +12,7 @@
         android:layout_height="400dp"></ListView>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonsubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/ratingbar"

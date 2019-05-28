@@ -272,8 +272,8 @@ public class SecondActivity extends AppCompatActivity {
   }
 
   public void onButtonClickListener() {
-    rating_b = (RatingBar) findViewById(R.id.ratingbar);
-    buttonsubmit = (Button) findViewById(R.id.button3);
+    rating_b = findViewById(R.id.ratingbar);
+    buttonsubmit = findViewById(R.id.buttonsubmit);
 
     buttonsubmit.setOnClickListener(
             new View.OnClickListener() {

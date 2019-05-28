@@ -17,7 +17,7 @@ public class ThirdActivity extends AppCompatActivity {
     }
 
     public void addListenerOnButton() {
-        back = (Button) findViewById(R.id.back);
+        back = findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

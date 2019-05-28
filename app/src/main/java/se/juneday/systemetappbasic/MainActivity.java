@@ -16,8 +16,8 @@ import java.util.Locale;
 import static android.content.Context.MODE_PRIVATE;
 
 public class MainActivity extends AppCompatActivity {
-    private Button Button2;
-    private Button button1;
+    private Button over20;
+    private Button under20;
 
 
 
@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Button2 = (Button) findViewById(R.id.button2);
-        button1 = (Button) findViewById(R.id.button1);
+        over20 = findViewById(R.id.over20);
+        under20 = findViewById(R.id.under20);
 
 
 
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addListenerOnButton(){
-        Button2.setOnClickListener(new View.OnClickListener() {
+        over20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (v.isClickable()) {
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        button1.setOnClickListener(new View.OnClickListener() {
+        under20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (v.isClickable()) {
