@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.PopupMenu;
+import android.support.v7.app.AppCompatDelegate;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -82,8 +82,15 @@ public class SecondActivity extends AppCompatActivity {
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
     MenuInflater inflater = getMenuInflater();
-    inflater.inflate(R.menu.actionbar_menu, menu);
 
+    //Nightmode
+    inflater.inflate(R.menu.actionbar_menu, menu);
+    int nightMode = AppCompatDelegate.getDefaultNightMode();
+    if(nightMode == AppCompatDelegate.MODE_NIGHT_YES){
+      menu.findItem(R.id.night_mode).setTitle(R.string.day_mode);
+    } else{
+      menu.findItem(R.id.night_mode).setTitle(R.string.night_mode);
+    }
     return true;
   }
 
@@ -101,7 +108,25 @@ public class SecondActivity extends AppCompatActivity {
         Log.d(LOG_TAG, "uh oh ;)");
         break;
     }
+
+    //Nightmode
+    if (item.getItemId() == R.id.night_mode) {
+      // Get the night mode state of the app.
+      int nightMode = AppCompatDelegate.getDefaultNightMode();
+      //Set the theme mode for the restarted activity
+      if (nightMode == AppCompatDelegate.MODE_NIGHT_YES) {
+        AppCompatDelegate.setDefaultNightMode
+                (AppCompatDelegate.MODE_NIGHT_NO);
+      } else {
+        AppCompatDelegate.setDefaultNightMode
+                (AppCompatDelegate.MODE_NIGHT_YES);
+      }
+// Recreate the activity for the theme change to take effect.
+      recreate();
+
+    }
     return true;
+
   }
 
 

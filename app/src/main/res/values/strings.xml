@@ -42,5 +42,11 @@
   <string name="productGroup">Product Group</string>
   <!-- ProductActivity strings end  -->
 
+  <!-- Nightmode/daymode string start  -->
+
+  <string name="night_mode">Night Mode</string>
+  <string name="day_mode">Day Mode</string>
+
+  <!-- Nightmode/daymode string end  -->
 
 </resources>
