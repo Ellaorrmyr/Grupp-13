@@ -21,7 +21,7 @@
       app:layout_constraintVertical_bias="0.443" />
 
   <Button
-      android:id="@+id/button2"
+      android:id="@+id/over20"
       android:layout_width="160dp"
       android:layout_height="46dp"
       android:background="@color/colorPrimary"
@@ -37,7 +37,7 @@
       app:layout_constraintVertical_bias="0.645" />
 
   <Button
-      android:id="@+id/button1"
+      android:id="@+id/under20"
       android:layout_width="160dp"
       android:layout_height="46dp"
       android:background="@color/colorPrimary"
